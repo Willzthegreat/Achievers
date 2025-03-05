@@ -1,0 +1,448 @@
+:root {
+    --lightblue: #e8f6fc;
+    --darker-blue: #8fddfe;
+    --lightgreen: #f3f4f0;
+    --vegan: #f4f9f0;
+    --meat: #fcf1f0;
+    --dessert: #fffbf4;
+    --lunch: #f4f4f4;
+    --chocolate: #f5f5f5;
+    --web-flow: #f69487;
+}
+
+*{
+  font-family: "Poppins", serif; 
+}
+ 
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 1em;
+    box-shadow: 1px 1px 4px #dedede;
+    z-index: 1;
+    position: relative;
+}
+
+.f-logo a img {
+    margin-top: 8px;
+    max-width: 13vw;
+}
+
+.nav-links {
+    display: flex;
+    padding: 1.2em 1em;
+    gap: 3em;
+}
+
+.nav-links  {
+    font-size: 1vmax;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover {
+    color:var(--darker-blue);
+}
+
+.socials {
+    display: flex;
+    padding: .4em 0 0 0;
+    gap: 1em;
+    font-size: 1.7vmax;
+}
+
+.socials a i {
+    color: black; 
+}
+
+.hamburger-open {
+    display: none;
+}
+
+.hamburger-close {
+    display: none;
+}
+
+@media (width <= 63em) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        padding-top:0.8px;
+        right: 0;
+        border-top: 3px solid #fff;
+        width: 40vmax;
+        height: 150vh;
+        gap: 5px;
+        background: var(--lightblue);
+        z-index: 999;
+        /* position: relative; */
+        transition: 250ms ease-in-out;
+    }
+    
+     .socials {
+        font-size: 1.8vmax;
+        margin-right: -9em;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 1em;
+        box-shadow: 1px 0 5px #8fddfe;
+    }
+
+    .nav-links a:hover {
+        background-color: white;
+    }
+
+    .hamburger-open {
+        display: block;
+        padding-top: .1em;
+        margin-right: -5em;
+        font-size: 2.2vmax;
+    }
+
+    .hamburger-close {
+        display: block;
+        padding-top: .1em;
+        margin:0 0 15px 0;
+        font-size: 2.2vmax;
+    }
+
+    .active {
+        display: flex;
+    }
+}
+
+
+@media (width <= 40em) {
+    .f-logo a img {
+        max-width: 16vw;
+    }  
+
+    .nav-links a {
+        font-size: .8rem;
+    }
+
+    .hamburger-open {
+        padding-top: .19em;
+    }
+}
+
+/* NavBar Ends Here */
+
+
+/* Head Section Starts Here */
+
+.head-section {
+    margin: 30px 0 40px 0;
+}
+
+.header-image-text {
+    display: flex;
+    margin: 10px 50px;
+    position: relative;
+}
+/* header Image */
+
+.img img {
+    
+    /* max-width: 90vw; */
+    height: 40vmax;
+    border-radius: 0 40px 40px 0;
+    box-sizing: border-box;
+}
+
+
+.head-section-text {
+    padding: 40px;
+    background-color: var(--lightblue);
+    border-radius: 40px 0 0 40px;
+}
+ 
+
+.hand-baked-recipe {
+    z-index: 1;
+    left: -50px;
+    top: 20px;
+    position: relative;
+}
+
+/* Header Text */
+
+
+
+
+
+
+
+@media (width <= 63em) {
+    .hand-baked-recipe {
+        /* position: relative; */
+        z-index: 1;
+        left: 36%;
+        top: 110px;
+        /* margin: 0 0 0 32.5vmax; */
+    }
+
+    .hand-baked-recipe img {
+        width: 10vw;
+    }
+
+    .header-image-text {
+        display: flex;
+        margin: 10px 50px;
+        position: relative;
+    }
+
+    .img img {
+        display: block;
+        max-width: 47vw auto;
+        /* max-width: 47vw; */
+        height: 49vw;
+        border-radius: 0  30px 30px 0;
+    }
+
+    .hot-recipe button, .minutes-button button {
+        width: 11vw;
+        height: 3vh;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        box-shadow: 1px 0 7px #8fddfebe;
+        background-color: white;
+    }
+
+    .head-section-text {
+        padding: 25px 30px 0 30px ;
+        border-radius:  30px 0 0 30px;
+    }
+
+    .hot-recipe img, .minutes-button i {
+        margin-top: 10px;
+    }
+
+    .hot-word {
+        margin-top: 12px;
+        font-size: 1.4vw;
+    }
+
+    .hot-recipe a, .hot-word a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .heading-text h1{
+        font-size: clamp(21px, 4vw, 20%);
+        margin:9px 0 -5px 0;
+    }
+
+    .heading-text p{
+        font-size: .9vw;
+        padding-right: 3em;
+        margin-bottom: 25px;
+    }
+
+    .hot-word {
+        font-size: 1.2vw;
+        margin-top: 8px;
+    }
+
+    .hot-recipe a, .hot-word a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .minutes-button{
+        display: flex;
+        justify-content: flex-start;
+        gap: 18px;
+    }
+
+    /* profile */
+
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        margin: 28px 0 0 0;
+    }
+
+    .profile-layer {
+        display: flex;
+        gap: 10px;
+    }
+
+    .profile-names h2 {
+        font-size: 1.3vw;
+        margin-top: 3px;
+    }
+
+    .profile-names p {
+        font-size: 1.4vw;
+        margin-top: -3px;
+    }
+
+    .recipe-view button{
+        width: 12vw;
+        height: 3vh;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        background-color: black;
+        box-shadow: 1px 0 7px #191919be;
+    } 
+
+    .recipe-view button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .hot-word1 {
+        font-size: 1vw;
+        margin-top: 7.6px;
+    }
+
+
+    .recipe-view button i {
+        color: white;
+        font-size: 1.5vw;
+        margin-top: 8.8px;
+        
+    }
+}
+
+
+@media (width <= 40em) {
+    .hand-baked-recipe {
+       display: none;
+    } 
+
+    .header-image-text {
+        flex-wrap: wrap;
+        margin: 10px 12px;
+    }
+   
+     .img img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .head-section-text {
+        padding: 30px 30px 20px 30px ;
+        border-radius:  0;
+    }
+   
+    .hot-recipe button, .minutes-button button {
+        width: 35vw;
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        box-shadow: 1px 0 7px #8fddfebe;
+        background-color: white;
+    }
+
+    .hot-recipe img, .minutes-button i {
+        margin-top: 16px;
+    }
+
+    .hot-word {
+        font-size: 3vw;
+    }
+
+    .heading-text h1{
+        font-size: 9vw;
+        margin:3px 0 -5px 0;
+    }
+
+    .heading-text p{
+        font-size: 2.2vw;
+    }
+
+    /* profile */
+
+    .profile {
+        margin: 40px 0 0 0;
+    }
+
+    .profile-names h2 {
+        font-size: 2.3vw;
+    }
+
+    .profile-names p {
+        font-size: 2.4vw;
+    }
+
+
+    .recipe-view button{
+        width: 35vw;
+        height: 5vh;
+    } 
+
+    .recipe-view button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .hot-word1 {
+        font-size: 3vw;
+        margin-top: 7.6px;
+    }
+
+
+    .recipe-view button i {
+        color: white;
+        font-size: 3.5vw;
+        margin-top: 8.8px;
+        
+    }
+}
+
+@media (width <= 25em) {
+    .hot-recipe button, .minutes-button button {
+        width: 30vw;
+        height: 5vh;
+    }
+
+    .hot-recipe img, .minutes-button i {
+        margin-top: 5px;
+    }
+
+    .hot-word {
+        margin-top: 5.4px;
+        font-size: 3vw;
+    }
+
+    .hot-word1 {
+        margin-top: 4px;
+    }
+
+
+    .recipe-view button i {
+        margin-top: 6px;
+        
+    }
+}
+
